@@ -1,0 +1,25 @@
+---
+abstract: "The great new MySQL::SlowLog::Filter!\r"
+author:
+  - 'Fayland Lam <fayland@gmail.com>'
+build_requires:
+  Test::More: 0
+distribution_type: module
+generated_by: 'Module::Install version 0.77'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MySQL-SlowLog-Filter
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  DBD::SQLite: 0
+  DBI: 0
+  File::Slurp: 0
+  Time::Local: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01

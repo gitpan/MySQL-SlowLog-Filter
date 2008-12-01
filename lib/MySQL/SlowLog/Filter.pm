@@ -3,7 +3,8 @@ package MySQL::SlowLog::Filter;
 use warnings;
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+our $AUTHORITY = 'cpan:FAYLAND';
 
 use base 'Exporter';
 use vars qw/@EXPORT_OK/;
@@ -231,7 +232,7 @@ __END__
 
 =head1 NAME
 
-MySQL::SlowLog::Filter - The great new MySQL::SlowLog::Filter!
+MySQL::SlowLog::Filter - MySQL Slow Query Log Filter
 
 =head1 SYNOPSIS
 
@@ -320,8 +321,6 @@ Return a unix timestamp from the given date. (070119 12:29:58)
 =item * no-duplicates
 
 =item * sorting
-
-=item * a bin/mysql_filter_slow_log.pl
 
 =back
 

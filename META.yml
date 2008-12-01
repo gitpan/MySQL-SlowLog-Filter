@@ -1,5 +1,5 @@
 ---
-abstract: "The great new MySQL::SlowLog::Filter!\r"
+abstract: "MySQL Slow Query Log Filter\r"
 author:
   - 'Fayland Lam <fayland@gmail.com>'
 build_requires:
@@ -19,7 +19,9 @@ requires:
   DBD::SQLite: 0
   DBI: 0
   File::Slurp: 0
+  Getopt::Long: 0
+  Pod::Usage: 0
   Time::Local: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02

@@ -3,7 +3,7 @@ package MySQL::SlowLog::Filter;
 use warnings;
 use strict;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 our $AUTHORITY = 'cpan:FAYLAND';
 
 use base 'Exporter';
@@ -12,9 +12,9 @@ use vars qw/@EXPORT_OK/;
 
 use Carp qw/croak/;
 use Time::Local;
-use DBI;
+#use DBI;
 use File::Slurp;
-use Data::Dumper;
+#use Data::Dumper;
 
 our @default_sorting = (
 	4,  'sum-query-time',
@@ -51,7 +51,7 @@ sub run {
     my $incremental   = $params->{incremental} || 0;
     
     my $min_query_time    = $params->{min_query_time} || $params->{T} || -1;
-    my $min_rows_examined = $params->{min_rows_examined} || $params->{R} || 0;
+    my $min_rows_examined = $params->{min_rows_examined} || $params->{R} || -1;
     
     my @lines = read_file( $file );
     
@@ -286,7 +286,7 @@ compare with "Query_time". default is -1. means all.
 
 =item min_rows_examined
 
-compare with "Rows_examined". default is 0. means all.
+compare with "Rows_examined". default is -1. means all.
 
 =back
 
